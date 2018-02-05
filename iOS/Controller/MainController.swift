@@ -11,6 +11,7 @@ import CoreData
 import SwiftyUserDefaults
 
 class MainController: UIViewController {
+    var viewWillAppearPendingActions = [(() -> Void)]()
     private var currentArticleBookmarkObserver: NSKeyValueObservation? = nil
     private var currentArticle: Article? = nil {
         didSet {
@@ -330,18 +331,18 @@ extension MainController: UIPopoverPresentationControllerDelegate {
             self.tableOfContentController.popoverPresentationController?.sourceRect = self.tableOfContentButtonItem.button.bounds
             self.tableOfContentController.popoverPresentationController?.delegate = self
             self.tableOfContentController.preferredContentSize = CGSize(width: 300, height: 400)
-            self.present(self.tableOfContentController, animated: true)
+            self.present(self.tableOfContentController, animated: animated)
         })
     }
     
-    private func presentBookmarkController(animated: Bool) {
+    func presentBookmarkController(animated: Bool) {
         bookmarkController.delegate = self
         bookmarkController.modalPresentationStyle = .popover
         bookmarkController.popoverPresentationController?.sourceView = bookmarkButtonItem.button
         bookmarkController.popoverPresentationController?.sourceRect = bookmarkButtonItem.button.bounds
         bookmarkController.popoverPresentationController?.delegate = self
         bookmarkController.preferredContentSize = CGSize(width: 400, height: 600)
-        present(bookmarkController, animated: true)
+        present(bookmarkController, animated: animated)
     }
     
     func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {

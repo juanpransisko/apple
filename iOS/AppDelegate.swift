@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
         return true
     }
     
+    func applicationWillResignActive(_ application: UIApplication) {
+        updateShortcutItems(application: application)
+    }
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         Queue.shared.add(scanProcedure: ScanProcedure(url: URL.documentDirectory))
         monitor.start()
@@ -63,6 +67,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
         Network.shared.backgroundEventsCompleteProcessing = completionHandler
     }
+    
+    // MARK: - Home Screen Quick Actions
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        guard let rootNavigationController = window?.rootViewController as? UINavigationController,
+            let mainController = rootNavigationController.topViewController as? MainController,
+            let shortcutItemType = ShortcutItemType(rawValue: shortcutItem.type) else { completionHandler(false); return }
+        switch shortcutItemType {
+        case .search:
+            break
+        case .bookmark:
+            mainController.presentBookmarkController(animated: false)
+        case .continueReading:
+            break
+        }
+        completionHandler(true)
+    }
+    
+    private func updateShortcutItems(application: UIApplication) {
+        let bookmark = UIApplicationShortcutItem(type: ShortcutItemType.bookmark.rawValue, localizedTitle: NSLocalizedString("Bookmark", comment: "3D Touch Menu Title"))
+        let search = UIApplicationShortcutItem(type: ShortcutItemType.search.rawValue, localizedTitle: NSLocalizedString("Search", comment: "3D Touch Menu Title"))
+        var shortcutItems = [bookmark, search]
+        
+        if let rootNavigationController = window?.rootViewController as? UINavigationController,
+            let mainController = rootNavigationController.topViewController as? MainController,
+            let title = mainController.currentWebController?.currentTitle, let url = mainController.currentWebController?.currentURL {
+            shortcutItems.append(UIApplicationShortcutItem(type: ShortcutItemType.continueReading.rawValue,
+                                                           localizedTitle: title , localizedSubtitle: NSLocalizedString("Continue Reading", comment: "3D Touch Menu Title"),
+                                                           icon: nil, userInfo: ["URL": url.absoluteString]))
+        }
+        application.shortcutItems = shortcutItems
+    }
+}
+
+enum ShortcutItemType: String {
+    case search, bookmark, continueReading
 }
 
 fileprivate extension URL {
