@@ -79,8 +79,10 @@ class MainController: UIViewController {
     }
     
     private func setChildController(controller: UIViewController) {
-        view.subviews.forEach({ $0.removeFromSuperview() })
-        childViewControllers.forEach({ $0.removeFromParentViewController() })
+        childViewControllers.forEach { (controller) in
+            controller.view.removeFromSuperview()
+            controller.removeFromParentViewController()
+        }
         
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         addChildViewController(controller)
@@ -92,11 +94,20 @@ class MainController: UIViewController {
                 controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 controller.view.rightAnchor.constraint(equalTo: view.rightAnchor)])
         } else {
-            NSLayoutConstraint.activate([
-                controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
-                controller.view.leftAnchor.constraint(equalTo: view.leftAnchor),
-                controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
-                controller.view.rightAnchor.constraint(equalTo: view.rightAnchor)])
+            if #available(iOS 11.0, *) {
+                NSLayoutConstraint.activate([
+                    controller.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+                    controller.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+                    controller.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                    controller.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)])
+            } else {
+                automaticallyAdjustsScrollViewInsets = false
+                NSLayoutConstraint.activate([
+                    controller.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+                    controller.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+                    controller.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+                    controller.view.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor)])
+            }
         }
         controller.didMove(toParentViewController: self)
     }

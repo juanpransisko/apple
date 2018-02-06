@@ -103,7 +103,11 @@ class SearchResultController: UIViewController, UISearchResultsUpdating, Procedu
         visualView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(visualView)
         
-        visualView.contentView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            visualView.contentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            visualView.contentView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        }
         visualView.contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         proportionalWidthConstraint = visualView.contentView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75)
