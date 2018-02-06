@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
         monitor.delegate = self
         Queue.shared.add(scanProcedure: ScanProcedure(url: URL.documentDirectory))
         monitor.start()
+        Preference.upgrade()
         return true
     }
     

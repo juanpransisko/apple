@@ -10,38 +10,12 @@ import SwiftyUserDefaults
 
 class Preference {
     
-    class var hasShowGetStartedAlert: Bool {
-        get{return Defaults[.hasShowGetStartedAlert]}
-        set{Defaults[.hasShowGetStartedAlert] = newValue}
-    }
-    
-    class var hasSubscribedToCloudKitChanges: Bool {
-        get{return Defaults[.hasSubscribedToCloudKitChanges]}
-        set{Defaults[.hasSubscribedToCloudKitChanges] = newValue}
-    }
-    
-    // MARK: - Recent Search
-    
-    class RecentSearch {
-        class func add(term: String) {
-            terms.insert(term, at: 0)
-        }
-        
-        class var terms: [String] {
-            get{return Defaults[.recentSearchTerms]}
-            set{
-                let searchTerms = NSOrderedSet(array: newValue).array as! [String]
-                Defaults[.recentSearchTerms] = searchTerms.count > 20 ? Array(searchTerms[0..<20]) : searchTerms
-            }
+    class func upgrade() {
+        if UserDefaults.standard.hasKey("preferredLanguageAlertPending") {
+            Defaults[.libraryHasShownLanguageFilterAlert] = !UserDefaults.standard.bool(forKey: "preferredLanguageAlertPending")
+            UserDefaults.standard.remove("preferredLanguageAlertPending")
         }
     }
-    
-    // MARK: - Reading
-    
-//    class var webViewZoomScale: Double {
-//        get{if let scale = Defaults[.webViewZoomScale] {return scale > 50 ? scale / 100 : scale} else {return 1}}
-//        set{Defaults[.webViewZoomScale] = newValue}
-//    }
     
     // MARK: - Library
     
@@ -53,11 +27,6 @@ class Preference {
     class var libraryRefreshAllowCellularData: Bool {
         get{return !Defaults[.libraryRefreshNotAllowCellularData]}
         set{Defaults[.libraryRefreshNotAllowCellularData] = !newValue}
-    }
-    
-    class var libraryLastRefreshTime: Date? {
-        get{return Defaults[.libraryLastRefreshTime]}
-        set{Defaults[.libraryLastRefreshTime] = newValue}
     }
     
     class var libraryRefreshInterval: TimeInterval {
