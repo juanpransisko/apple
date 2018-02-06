@@ -11,9 +11,8 @@ import SwiftyUserDefaults
 class Preference {
     
     class func upgrade() {
-        if UserDefaults.standard.hasKey("preferredLanguageAlertPending") {
-            Defaults[.libraryHasShownLanguageFilterAlert] = !UserDefaults.standard.bool(forKey: "preferredLanguageAlertPending")
-            UserDefaults.standard.remove("preferredLanguageAlertPending")
+        if UserDefaults.standard.hasKey("libraryLastRefreshTime") {
+            Defaults[.libraryHasShownLanguageFilterAlert] = true
         }
     }
     
