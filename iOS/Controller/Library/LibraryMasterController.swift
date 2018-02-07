@@ -58,6 +58,8 @@ class LibraryMasterController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    
+    
     @objc func dismissController() {
         dismiss(animated: true, completion: nil)
     }
@@ -202,7 +204,7 @@ class LibraryMasterController: UIViewController, UITableViewDelegate, UITableVie
             guard let indexPath = indexPath else {return}
             tableView.deleteRows(at: [indexPath], with: .fade)
         case .update:
-            guard let indexPath = indexPath else {return}
+            guard let indexPath = indexPath, tableView.indexPathsForVisibleRows?.contains(indexPath) == true else {return}
             let sectionTitle = fetchedResultController.sections?[indexPath.section].name
             if sectionTitle == "1", let cell = tableView.cellForRow(at: indexPath) as? LibraryDownloadCell {
                 configure(cell: cell, indexPath: indexPath, animated: true)
