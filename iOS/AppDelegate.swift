@@ -79,6 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
         case .search:
             break
         case .bookmark:
+            mainController.presentedViewController?.dismiss(animated: false)
             mainController.presentBookmarkController(animated: false)
         case .continueReading:
             break
