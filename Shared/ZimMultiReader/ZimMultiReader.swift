@@ -19,7 +19,8 @@ extension ZimMultiReader {
     func add(url: URL) {__add(by: url)}
     func remove(id: ZimFileID) {__remove(byID: id)}
     
-    func hasIndex(id: ZimFileID) -> Bool {return __hasIndex(id)}
+    func hasEmbeddedIndex(id: ZimFileID) -> Bool {return __hasEmbeddedIndex(id)}
+    func hasExternalIndex(id: ZimFileID) -> Bool {return __hasExternalIndex(id)}
     
     func getContent(bookID: String, contentPath: String) -> (data: Data, mime: String, length: Int)? {
         guard let content = __getContent(bookID, contentURL: contentPath),

@@ -20,7 +20,9 @@
 - (void)removeReaderByID:(NSString *_Nonnull)bookID NS_REFINED_FOR_SWIFT;
 - (void)removeStaleReaders;
 
-- (BOOL)hasIndex:(NSString *_Nonnull)zimFileID NS_REFINED_FOR_SWIFT;
+- (BOOL)hasEmbeddedIndex:(NSString *_Nonnull)zimFileID NS_REFINED_FOR_SWIFT;
+- (BOOL)hasExternalIndex:(NSString *_Nonnull)zimFileID NS_REFINED_FOR_SWIFT;
+
 - (NSDictionary *_Nullable)getContent:(NSString *_Nonnull)zimFileID contentURL:(NSString *_Nonnull)contentURL NS_REFINED_FOR_SWIFT;
 - (ZimMetaData *_Nullable)getMetaData:(NSString *_Nonnull)zimFileID NS_REFINED_FOR_SWIFT;
 

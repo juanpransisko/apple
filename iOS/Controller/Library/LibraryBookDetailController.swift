@@ -23,9 +23,9 @@ class LibraryBookDetailController: UIViewController, UITableViewDelegate, UITabl
             tableView.endUpdates()
         }
     }
-    let metas: [[BookMeta]] = [
+    private var metas: [[BookMeta]] = [
         [.language, .size, .date],
-        [.hasIndex, .hasPicture],
+        [.hasPicture, .hasIndex],
         [.articleCount, .mediaCount],
         [.creator, .publisher]
     ]
@@ -194,9 +194,21 @@ class LibraryBookDetailController: UIViewController, UITableViewDelegate, UITabl
                 cell.detailTextLabel?.text = book.dateDescription
             case .hasIndex:
                 cell.textLabel?.text = NSLocalizedString("Indexed", comment: "Book Detail Cell")
-                cell.detailTextLabel?.text = ZimMultiReader.shared.hasIndex(id: book.id) ? NSLocalizedString("Yes", comment: "Book Detail Cell, has index") : NSLocalizedString("No", comment: "Book Detail Cell, does not have index")
+                cell.detailTextLabel?.text = {
+                    if book.state == .local {
+                        if ZimMultiReader.shared.hasEmbeddedIndex(id: book.id) {
+                            return NSLocalizedString("Embedded", comment: "Book Detail Cell, has index")
+                        } else if ZimMultiReader.shared.hasExternalIndex(id: book.id) {
+                            return NSLocalizedString("External", comment: "Book Detail Cell, has index")
+                        } else {
+                            return NSLocalizedString("No", comment: "Book Detail Cell, has index")
+                        }
+                    } else {
+                        return NSLocalizedString("No", comment: "Book Detail Cell, does not have index")
+                    }
+                }()
             case .hasPicture:
-                cell.textLabel?.text = NSLocalizedString("Picture", comment: "Book Detail Cell")
+                cell.textLabel?.text = NSLocalizedString("Pictures", comment: "Book Detail Cell")
                 cell.detailTextLabel?.text = book.hasPic ? NSLocalizedString("Yes", comment: "Book Detail Cell, has picture") : NSLocalizedString("No", comment: "Book Detail Cell, does not have picture")
             case .articleCount:
                 cell.textLabel?.text = NSLocalizedString("Article Count", comment: "Book Detail Cell")

@@ -63,10 +63,9 @@ NSMutableDictionary *fileURLs = [[NSMutableDictionary alloc] init]; // [ID: File
         readers.insert(std::make_pair(identifier, reader));
         
         // check if there is an external idx directory
-        NSString *idxDirName = [[[[url pathComponents] lastObject] stringByReplacingOccurrencesOfString:@".zimaa" withString:@".idx"] stringByReplacingOccurrencesOfString:@".zim" withString:@".idx"];
-        NSString *idxDirPath = [[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:idxDirName] path];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:idxDirPath]) {
-            searcher = new kiwix::Searcher([idxDirPath cStringUsingEncoding:NSUTF8StringEncoding], NULL, NULL);
+        NSURL *idxDirURL = [url URLByAppendingPathExtension:@"idx"];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[idxDirURL path]]) {
+            kiwix::Searcher *searcher = new kiwix::Searcher([idxDirURL fileSystemRepresentation], reader.get(), identifier);
             externalSearchers.insert(std::make_pair(identifier, searcher));
         }
         
@@ -95,9 +94,9 @@ NSMutableDictionary *fileURLs = [[NSMutableDictionary alloc] init]; // [ID: File
     }
 }
 
-# pragma mark - get content
+# pragma mark - check index
 
-- (BOOL)hasIndex:(NSString *_Nonnull)zimFileID {
+- (BOOL)hasEmbeddedIndex:(NSString *_Nonnull)zimFileID {
     auto found = readers.find([zimFileID cStringUsingEncoding:NSUTF8StringEncoding]);
     if (found == readers.end()) {
         return NO;
@@ -106,6 +105,17 @@ NSMutableDictionary *fileURLs = [[NSMutableDictionary alloc] init]; // [ID: File
         return reader->hasFulltextIndex();
     }
 }
+
+- (BOOL)hasExternalIndex:(NSString *_Nonnull)zimFileID {
+    auto found = externalSearchers.find([zimFileID cStringUsingEncoding:NSUTF8StringEncoding]);
+    if (found == externalSearchers.end()) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+# pragma mark - get content
 
 - (NSDictionary *)getContent:(NSString *)zimFileID contentURL:(NSString *)contentURL {
     auto found = readers.find([zimFileID cStringUsingEncoding:NSUTF8StringEncoding]);

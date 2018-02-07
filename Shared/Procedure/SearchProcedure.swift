@@ -51,7 +51,7 @@ class SearchProcedure: Procedure {
     
     private func addExternalIndexSearchResults() {
         for id in ZimMultiReader.shared.externalIndexZimIDs {
-            if ids.contains(id), !ZimMultiReader.shared.hasIndex(id: id) {
+            if ids.contains(id), !ZimMultiReader.shared.hasEmbeddedIndex(id: id) {
                 ZimMultiReader.shared.getExternalIndexSearchResults(searchText: searchText, zimFileID: id, count: 5).forEach({ results.insert($0) })
             }
         }
