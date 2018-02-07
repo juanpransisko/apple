@@ -155,10 +155,12 @@ class LibraryCategoryController: UIViewController, UITableViewDataSource, UITabl
     
     private var predicate: NSCompoundPredicate {
         let displayedLanguages = Language.fetch(displayed: true, context: managedObjectContext)
-        var subpredicates = [
-            NSPredicate(format: "stateRaw == %@", "cloud"),
-            displayedLanguages.count > 0 ? NSPredicate(format: "language IN %@", displayedLanguages) : NSPredicate(format: "language.name != nil")
-        ]
+        var subpredicates = [NSPredicate]()
+        if displayedLanguages.count > 0 {
+            subpredicates.append(NSPredicate(format: "language IN %@", displayedLanguages))
+        } else {
+            subpredicates.append(NSPredicate(format: "language.name != nil"))
+        }
         if let category = category {
             subpredicates.append(NSPredicate(format: "category == %@", category.rawValue))
         }

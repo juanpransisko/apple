@@ -715,8 +715,8 @@
 			children = (
 				977D7BBD1F9FC618009A8703 /* Queue.swift */,
 				9702BE211F97FA4300E6B4EE /* LibraryRefreshProcedure.swift */,
-				975415D31F54C1870007EA6C /* SearchProcedure.swift */,
 				977F983D1F9E43EC002ABFCE /* ScanProcedure.swift */,
+				975415D31F54C1870007EA6C /* SearchProcedure.swift */,
 			);
 			path = Procedure;
 			sourceTree = "<group>";

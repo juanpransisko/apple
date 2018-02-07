@@ -87,6 +87,14 @@ class ScanProcedure: Procedure {
                             return true
                         }
                     }()
+                    
+                    book.hasIndex = {
+                        if meta.tags.contains("_ftindex") {
+                            return true
+                        } else {
+                            return false
+                        }
+                    }()
                 }
             }
 
