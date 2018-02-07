@@ -204,7 +204,11 @@ class LibraryBookDetailController: UIViewController, UITableViewDelegate, UITabl
                             return NSLocalizedString("No", comment: "Book Detail Cell, has index")
                         }
                     } else {
-                        return NSLocalizedString("No", comment: "Book Detail Cell, does not have index")
+                        if book.hasIndex {
+                            return NSLocalizedString("Embedded", comment: "Book Detail Cell, does not have index")
+                        } else {
+                            return NSLocalizedString("No", comment: "Book Detail Cell, does not have index")
+                        }
                     }
                 }()
             case .hasPicture:

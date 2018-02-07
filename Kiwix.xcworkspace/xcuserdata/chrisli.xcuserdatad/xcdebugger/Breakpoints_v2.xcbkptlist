@@ -31,13 +31,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Shared/ZimMultiReader/ZimMultiReader.mm"
-            timestampString = "539731745.634097"
+            timestampString = "539732917.0087709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "237"
             endingLineNumber = "237"
-            landmarkName = "ZimMultiReader"
-            landmarkType = "3">
+            landmarkName = "-getExternalIndexSearchResults:zimFileID:count:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
