@@ -8,6 +8,7 @@
 
 import CoreData
 import ProcedureKit
+import SwiftyUserDefaults
 
 class ScanProcedure: Procedure {
     let urls: [URL]
@@ -21,6 +22,8 @@ class ScanProcedure: Procedure {
         urls.forEach({ addReader(dir: $0) })
         ZimMultiReader.shared.removeStaleReaders()
         updateDatabase()
+        
+        BackupManager.updateExcludedFromBackupForDocumentDirectoryContents(isExcluded: !Defaults[.backupDocumentDirectory])
         
         print("Scan Finished, number of readers: \(ZimMultiReader.shared.ids.count)")
         finish()

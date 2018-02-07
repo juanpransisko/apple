@@ -49,6 +49,8 @@
 		972E6F641FA11A6100F5C927 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E6F631FA11A6100F5C927 /* RoundedButton.swift */; };
 		974000151DB008C6009A740D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9788419C1DA2FF2A00D22D3C /* MainInterface.storyboard */; };
 		97533B461F4C723900F6651A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97533B451F4C723900F6651A /* MainWindowController.swift */; };
+		97598E09202B60E0005A9055 /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97598E08202B60E0005A9055 /* BackupManager.swift */; };
+		97598E0A202B60E0005A9055 /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97598E08202B60E0005A9055 /* BackupManager.swift */; };
 		975FDADA1F6082DA00A10E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FDAD91F6082DA00A10E8C /* AppDelegate.swift */; };
 		975FDAE11F6082DA00A10E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975FDAE01F6082DA00A10E8C /* Assets.xcassets */; };
 		975FDAE41F6082DA00A10E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975FDAE21F6082DA00A10E8C /* LaunchScreen.storyboard */; };
@@ -160,6 +162,7 @@
 		97B1D0B61F9A3AE7000C7848 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97642B981E380CC0003E2D0B /* Network.swift */; };
 		97B1D0B91F9A3CB0000C7848 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1FD401D6F728200A80EE2 /* Preference.swift */; };
 		97B794201F4E23F300F3EBE8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7941F1F4E23F300F3EBE8 /* WelcomeView.swift */; };
+		97BAA542202B4C5E00500644 /* SettingBackupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAA541202B4C5E00500644 /* SettingBackupController.swift */; };
 		97D00A791FBB89F000165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7D1FBB89FB00165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7F1FBB92D400165629 /* TableOfContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */; };
@@ -248,6 +251,7 @@
 		974C49671DA4266200E276E1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		97533B451F4C723900F6651A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		975415D31F54C1870007EA6C /* SearchProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProcedure.swift; sourceTree = "<group>"; };
+		97598E08202B60E0005A9055 /* BackupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupManager.swift; sourceTree = "<group>"; };
 		9759D4211F4F278800705779 /* Kiwix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kiwix.entitlements; sourceTree = "<group>"; };
 		975FDAD91F6082DA00A10E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		975FDAE01F6082DA00A10E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 		97A9F6F41E2E990500F423AA /* Inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Inject.js; sourceTree = "<group>"; };
 		97B1046E1F8FC63C00488444 /* LibraryMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMasterController.swift; sourceTree = "<group>"; };
 		97B7941F1F4E23F300F3EBE8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		97BAA541202B4C5E00500644 /* SettingBackupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBackupController.swift; sourceTree = "<group>"; };
 		97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentItem.swift; sourceTree = "<group>"; };
 		97D3F62520237749006D3FE6 /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 		97D6812B1D6F70DE00E5FA99 /* 1.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.5.xcdatamodel; sourceTree = "<group>"; };
@@ -755,6 +760,7 @@
 				97252107200F9D6A00B60A80 /* SettingController.swift */,
 				9763EDC8201FCA6900F3A6D5 /* SettingWebController.swift */,
 				97A2180B2024EC3800D1E67B /* SettingFontSizeViewController.swift */,
+				97BAA541202B4C5E00500644 /* SettingBackupController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -792,6 +798,7 @@
 				97A1FD401D6F728200A80EE2 /* Preference.swift */,
 				97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */,
 				97E4298F1FBDF48800ABE62E /* DirectoryMonitor.swift */,
+				97598E08202B60E0005A9055 /* BackupManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1799,6 +1806,7 @@
 				97050D031F6735100021DE78 /* WebKitHandler.swift in Sources */,
 				9702BE231F97FA4300E6B4EE /* LibraryRefreshProcedure.swift in Sources */,
 				97028C55201A7D43001259CB /* WebViewControllerProtocols.swift in Sources */,
+				97598E0A202B60E0005A9055 /* BackupManager.swift in Sources */,
 				977D7BB91F9E6A43009A8703 /* ZimMultiReader.swift in Sources */,
 				97252118200F9D7F00B60A80 /* WelcomeController.swift in Sources */,
 				977D7BBF1F9FC618009A8703 /* Queue.swift in Sources */,
@@ -1887,6 +1895,7 @@
 				97B1D0B91F9A3CB0000C7848 /* Preference.swift in Sources */,
 				97A36C691F8EA6F40079B452 /* 1.5.xcmappingmodel in Sources */,
 				977D7BD01F9FE34E009A8703 /* ZimMetaData.mm in Sources */,
+				97BAA542202B4C5E00500644 /* SettingBackupController.swift in Sources */,
 				97B1D0B61F9A3AE7000C7848 /* Network.swift in Sources */,
 				971B8E58202246ED00C5C939 /* RecentSearchCells.swift in Sources */,
 				97D00A7F1FBB92D400165629 /* TableOfContentItem.swift in Sources */,
@@ -1894,6 +1903,7 @@
 				97D9D5641FA8F00E005B28F0 /* 1.9.xcmappingmodel in Sources */,
 				97252105200E908000B60A80 /* TableViewCell.swift in Sources */,
 				97A36C5B1F8EA6DD0079B452 /* Kiwix.xcdatamodeld in Sources */,
+				97598E09202B60E0005A9055 /* BackupManager.swift in Sources */,
 				972B665F2007F9F5003F5365 /* LegacyWebController.swift in Sources */,
 				972521012009616B00B60A80 /* EmptyContentView.swift in Sources */,
 				97A36C571F8D5FCD0079B452 /* LibraryController.swift in Sources */,

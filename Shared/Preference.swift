@@ -53,13 +53,13 @@ class Preference {
 }
 
 extension DefaultsKeys {
-    static let hasShowGetStartedAlert = DefaultsKey<Bool>("hasShowGetStartedAlert")
     static let hasSubscribedToCloudKitChanges = DefaultsKey<Bool>("hasSubscribedToCloudKitChanges")
-    static let recentSearchTexts = DefaultsKey<[String]>("recentSearchTexts")
-    static let recentSearchTerms = DefaultsKey<[String]>("recentSearchTerms")
-    static let webViewZoomScale = DefaultsKey<Double?>("webViewZoomScale")
     static let activeUseHistory = DefaultsKey<[Date]>("activeUseHistory")
     static let haveRateKiwix = DefaultsKey<Bool>("haveRateKiwix")
+    
+    static let backupDocumentDirectory = DefaultsKey<Bool>("backupDocumentDirectory")
+    static let recentSearchTexts = DefaultsKey<[String]>("recentSearchTexts")
+    static let webViewZoomScale = DefaultsKey<Double?>("webViewZoomScale")
     
     static let libraryAutoRefreshDisabled = DefaultsKey<Bool>("libraryAutoRefreshDisabled")
     static let libraryRefreshNotAllowCellularData = DefaultsKey<Bool>("libraryRefreshNotAllowCellularData")
