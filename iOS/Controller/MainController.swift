@@ -78,6 +78,8 @@ class MainController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .UIApplicationWillEnterForeground, object: nil)
     }
     
+    // MARK: -
+    
     private func setChildController(controller: UIViewController) {
         childViewControllers.forEach { (controller) in
             controller.view.removeFromSuperview()
@@ -110,6 +112,21 @@ class MainController: UIViewController {
             }
         }
         controller.didMove(toParentViewController: self)
+    }
+    
+    func updateBookmarkWidgetData() {
+        //(title: String, url: String, thumbImageData: Data)
+        let context = CoreDataContainer.shared.viewContext
+        let bookmarks = Article.fetchRecentBookmarks(count: 8, context: context)
+            .map({ (article) -> [String: Any]? in
+                guard let title = article.title, let url = article.url else {return nil}
+                return [
+                    "title": title,
+                    "url": url.absoluteString,
+                    "thumbnailData": article.thumbnailData ?? article.book?.favIcon ?? Data()
+                ]
+            }).flatMap({ $0 })
+        UserDefaults(suiteName: "group.kiwix")?.set(bookmarks, forKey: "bookmarks")
     }
 }
 
@@ -324,6 +341,7 @@ extension MainController: BarButtonItemDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     controller.dismiss(animated: true, completion: nil)
                 })
+                self.updateBookmarkWidgetData()
             })
         default:
             break
