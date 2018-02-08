@@ -47,7 +47,6 @@
 		972B66602007F9F7003F5365 /* WebKitWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97050D001F6733400021DE78 /* WebKitWebController.swift */; };
 		972B6662200808D6003F5365 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972B6661200808D6003F5365 /* WelcomeController.swift */; };
 		972E6F641FA11A6100F5C927 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E6F631FA11A6100F5C927 /* RoundedButton.swift */; };
-		974000151DB008C6009A740D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9788419C1DA2FF2A00D22D3C /* MainInterface.storyboard */; };
 		97533B461F4C723900F6651A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97533B451F4C723900F6651A /* MainWindowController.swift */; };
 		97598E09202B60E0005A9055 /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97598E08202B60E0005A9055 /* BackupManager.swift */; };
 		97598E0A202B60E0005A9055 /* BackupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97598E08202B60E0005A9055 /* BackupManager.swift */; };
@@ -98,7 +97,6 @@
 		976D29F31F44B4F4003F5431 /* libxapian.30.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 976D29DB1F44B46D003F5431 /* libxapian.30.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		976D29F41F44B4F4003F5431 /* libz.1.2.8.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 976D29DC1F44B46D003F5431 /* libz.1.2.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		976D29F51F44B4F4003F5431 /* libzim.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 976D29DD1F44B46D003F5431 /* libzim.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9779C3171D4575AE0064CC8E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779C3161D4575AE0064CC8E /* TodayViewController.swift */; };
 		977D7BB41F9E6A43009A8703 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977D7BB11F9E6A43009A8703 /* SearchResult.swift */; };
 		977D7BB51F9E6A43009A8703 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977D7BB11F9E6A43009A8703 /* SearchResult.swift */; };
 		977D7BB61F9E6A43009A8703 /* ZimMultiReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 977D7BB21F9E6A43009A8703 /* ZimMultiReader.mm */; };
@@ -165,11 +163,14 @@
 		97B794201F4E23F300F3EBE8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7941F1F4E23F300F3EBE8 /* WelcomeView.swift */; };
 		97BAA542202B4C5E00500644 /* SettingBackupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BAA541202B4C5E00500644 /* SettingBackupController.swift */; };
 		97C575D5202CAF7000E37502 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E854211810A39173DD6A5BD /* Pods_iOS.framework */; };
+		97C575F4202CB0E800E37502 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C575F3202CB0E800E37502 /* NotificationCenter.framework */; };
+		97C575F7202CB0E800E37502 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C575F6202CB0E800E37502 /* TodayViewController.swift */; };
+		97C575FA202CB0E800E37502 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C575F8202CB0E800E37502 /* MainInterface.storyboard */; };
+		97C575FE202CB0E900E37502 /* Bookmarks.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97C575F2202CB0E800E37502 /* Bookmarks.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		97D00A791FBB89F000165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7D1FBB89FB00165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7F1FBB92D400165629 /* TableOfContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */; };
 		97D3F6262023774A006D3FE6 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3F62520237749006D3FE6 /* SearchResultController.swift */; };
-		97DB65DA1D4576B600A2CC42 /* BookmarkWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DB65D91D4576B600A2CC42 /* BookmarkWidgetCell.swift */; };
 		97E34E0C20124F33005080B2 /* SearchNoTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E34E0B20124F33005080B2 /* SearchNoTextController.swift */; };
 		97E34E0D20124F33005080B2 /* SearchNoTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E34E0B20124F33005080B2 /* SearchNoTextController.swift */; };
 		97E429901FBDF48800ABE62E /* DirectoryMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E4298F1FBDF48800ABE62E /* DirectoryMonitor.swift */; };
@@ -179,6 +180,16 @@
 		DFD371610877B5817E9C9FEB /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF90AB14037E242E284CA8 /* Pods_macOS.framework */; };
 		FA1E975E797443400EBF3EE8 /* Pods_WikiMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14995D226EC82CFFBBB5B159 /* Pods_WikiMed.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97C575FC202CB0E900E37502 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97A2AB801C1B80FF00052E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97C575F1202CB0E800E37502;
+			remoteInfo = Bookmarks;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		975FDAF31F6089F000A10E8C /* CopyFiles */ = {
@@ -209,6 +220,17 @@
 				976D29F41F44B4F4003F5431 /* libz.1.2.8.dylib in CopyFiles */,
 				976D29F51F44B4F4003F5431 /* libzim.2.dylib in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C57602202CB0E900E37502 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97C575FE202CB0E900E37502 /* Bookmarks.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -256,7 +278,6 @@
 		975FDAE51F6082DA00A10E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975FDB061F608F4100A10E8C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		975FDB0B1F60930A00A10E8C /* WebKitHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitHandler.swift; sourceTree = "<group>"; };
-		976306EF1FC4DF7F004B171A /* Bookmarks.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = Bookmarks.appex; path = "/Users/chrisli/Developer/Kiwix/build/Debug-iphoneos/Bookmarks.appex"; sourceTree = "<absolute>"; };
 		976306F01FC5D050004B171A /* TabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
 		9763EDC8201FCA6900F3A6D5 /* SettingWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWebController.swift; sourceTree = "<group>"; };
 		9763EDCA201FCC3900F3A6D5 /* About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = About.html; sourceTree = "<group>"; };
@@ -308,7 +329,6 @@
 		979FD158201679C5007B5290 /* SearchResultsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsListController.swift; sourceTree = "<group>"; };
 		97A1FD401D6F728200A80EE2 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		97A2180B2024EC3800D1E67B /* SettingFontSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFontSizeViewController.swift; sourceTree = "<group>"; };
-		97A36BAF1F8C0B590079B452 /* WikiMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = WikiMed.app; path = "/Users/chrisli/Developer/Kiwix/build/Debug-iphoneos/WikiMed.app"; sourceTree = "<absolute>"; };
 		97A36C4E1F8C21210079B452 /* Kiwix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiwix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A36C501F8D4FB80079B452 /* VisualEffectShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectShadowView.swift; sourceTree = "<group>"; };
 		97A36C561F8D5FCD0079B452 /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
@@ -317,6 +337,12 @@
 		97B1046E1F8FC63C00488444 /* LibraryMasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryMasterController.swift; sourceTree = "<group>"; };
 		97B7941F1F4E23F300F3EBE8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		97BAA541202B4C5E00500644 /* SettingBackupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBackupController.swift; sourceTree = "<group>"; };
+		97C575EC202CB0A300E37502 /* WikiMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C575F2202CB0E800E37502 /* Bookmarks.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Bookmarks.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C575F3202CB0E800E37502 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		97C575F6202CB0E800E37502 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		97C575F9202CB0E800E37502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		97C575FB202CB0E900E37502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentItem.swift; sourceTree = "<group>"; };
 		97D3F62520237749006D3FE6 /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 		97D6812B1D6F70DE00E5FA99 /* 1.5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.5.xcdatamodel; sourceTree = "<group>"; };
@@ -621,13 +647,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9779C3101D4575AD0064CC8E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9793157E1E5127930093D3BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,6 +686,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97C575EF202CB0E800E37502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C575F4202CB0E800E37502 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -677,6 +704,7 @@
 				2E854211810A39173DD6A5BD /* Pods_iOS.framework */,
 				81DF90AB14037E242E284CA8 /* Pods_macOS.framework */,
 				14995D226EC82CFFBBB5B159 /* Pods_WikiMed.framework */,
+				97C575F3202CB0E800E37502 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -791,6 +819,7 @@
 				97C447131FC4BD3D00A21B4B /* Storyboards */,
 				97A996D81F62F3C5007A6282 /* View */,
 				975FDB0E1F60944A00A10E8C /* Controller */,
+				97C575F5202CB0E800E37502 /* BookmarksWidget */,
 				975FDAEA1F60839900A10E8C /* Support */,
 				975FDAE01F6082DA00A10E8C /* Assets.xcassets */,
 			);
@@ -958,6 +987,8 @@
 				F544A4E4357A6D33CF234C6B /* Pods */,
 				3B93EAF9B5C5AA23046BDEAC /* Frameworks */,
 				97A36C4E1F8C21210079B452 /* Kiwix.app */,
+				97C575EC202CB0A300E37502 /* WikiMed.app */,
+				97C575F2202CB0E800E37502 /* Bookmarks.appex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -994,6 +1025,16 @@
 				9717A2521FB2592D00837492 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		97C575F5202CB0E800E37502 /* BookmarksWidget */ = {
+			isa = PBXGroup;
+			children = (
+				97C575F6202CB0E800E37502 /* TodayViewController.swift */,
+				97C575F8202CB0E800E37502 /* MainInterface.storyboard */,
+				97C575FB202CB0E900E37502 /* Info.plist */,
+			);
+			path = BookmarksWidget;
 			sourceTree = "<group>";
 		};
 		97D9D3F41F43813D00A8CBEF /* include */ = {
@@ -1383,25 +1424,8 @@
 			);
 			name = WikiMed;
 			productName = WikiMed;
-			productReference = 97A36BAF1F8C0B590079B452 /* WikiMed.app */;
+			productReference = 97C575EC202CB0A300E37502 /* WikiMed.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9779C3121D4575AD0064CC8E /* Bookmarks */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9779C31F1D4575AE0064CC8E /* Build configuration list for PBXNativeTarget "Bookmarks" */;
-			buildPhases = (
-				9779C30F1D4575AD0064CC8E /* Sources */,
-				9779C3101D4575AD0064CC8E /* Frameworks */,
-				9779C3111D4575AD0064CC8E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Bookmarks;
-			productName = Bookmarks;
-			productReference = 976306EF1FC4DF7F004B171A /* Bookmarks.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		979315801E5127930093D3BA /* macOS */ = {
 			isa = PBXNativeTarget;
@@ -1434,15 +1458,34 @@
 				97A36C431F8C21210079B452 /* Resources */,
 				97A36C491F8C21210079B452 /* [CP] Embed Pods Frameworks */,
 				97A36C4A1F8C21210079B452 /* [CP] Copy Pods Resources */,
+				97C57602202CB0E900E37502 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				97C575FD202CB0E900E37502 /* PBXTargetDependency */,
 			);
 			name = iOS;
 			productName = WikiMed;
 			productReference = 97A36C4E1F8C21210079B452 /* Kiwix.app */;
 			productType = "com.apple.product-type.application";
+		};
+		97C575F1202CB0E800E37502 /* Bookmarks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C575FF202CB0E900E37502 /* Build configuration list for PBXNativeTarget "Bookmarks" */;
+			buildPhases = (
+				97C575EE202CB0E800E37502 /* Sources */,
+				97C575EF202CB0E800E37502 /* Frameworks */,
+				97C575F0202CB0E800E37502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bookmarks;
+			productName = Bookmarks;
+			productReference = 97C575F2202CB0E800E37502 /* Bookmarks.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1450,7 +1493,7 @@
 		97A2AB801C1B80FF00052E74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Chris Li";
 				TargetAttributes = {
@@ -1458,16 +1501,6 @@
 						CreatedOnToolsVersion = 9.0;
 						DevelopmentTeam = L7HWM3SP3L;
 						ProvisioningStyle = Automatic;
-					};
-					9779C3121D4575AD0064CC8E = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = L7HWM3SP3L;
-						LastSwiftMigration = 0900;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
 					};
 					979315801E5127930093D3BA = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1493,6 +1526,11 @@
 						DevelopmentTeam = L7HWM3SP3L;
 						ProvisioningStyle = Automatic;
 					};
+					97C575F1202CB0E800E37502 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = L7HWM3SP3L;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 97A2AB831C1B80FF00052E74 /* Build configuration list for PBXProject "Kiwix" */;
@@ -1511,7 +1549,7 @@
 				979315801E5127930093D3BA /* macOS */,
 				97A36C241F8C21210079B452 /* iOS */,
 				975FDAD61F6082DA00A10E8C /* WikiMed */,
-				9779C3121D4575AD0064CC8E /* Bookmarks */,
+				97C575F1202CB0E800E37502 /* Bookmarks */,
 			);
 		};
 /* End PBXProject section */
@@ -1525,14 +1563,6 @@
 				97D00A7D1FBB89FB00165629 /* Inject.js in Resources */,
 				975FDAE41F6082DA00A10E8C /* LaunchScreen.storyboard in Resources */,
 				975FDAE11F6082DA00A10E8C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9779C3111D4575AD0064CC8E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				974000151DB008C6009A740D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1556,6 +1586,14 @@
 				97D00A791FBB89F000165629 /* Inject.js in Resources */,
 				97A36C441F8C21210079B452 /* LaunchScreen.storyboard in Resources */,
 				97A36C451F8C21210079B452 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C575F0202CB0E800E37502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C575FA202CB0E800E37502 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1772,15 +1810,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9779C30F1D4575AD0064CC8E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9779C3171D4575AE0064CC8E /* TodayViewController.swift in Sources */,
-				97DB65DA1D4576B600A2CC42 /* BookmarkWidgetCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9793157D1E5127930093D3BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1858,7 +1887,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97C575EE202CB0E800E37502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C575F7202CB0E800E37502 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97C575FD202CB0E900E37502 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97C575F1202CB0E800E37502 /* Bookmarks */;
+			targetProxy = 97C575FC202CB0E900E37502 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		975FDAE21F6082DA00A10E8C /* LaunchScreen.storyboard */ = {
@@ -1867,6 +1912,14 @@
 				975FDAE31F6082DA00A10E8C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		97C575F8202CB0E800E37502 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C575F9202CB0E800E37502 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1932,44 +1985,6 @@
 				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Shared/Dependencies/include";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7";
-			};
-			name = Release;
-		};
-		9779C3201D4575AE0064CC8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = iOSWidgets/Bookmarks/Bookmarks.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L7HWM3SP3L;
-				INFOPLIST_FILE = iOSWidgets/Bookmarks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.Kiwix.Bookmarks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		9779C3211D4575AE0064CC8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = iOSWidgets/Bookmarks/Bookmarks.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L7HWM3SP3L;
-				INFOPLIST_FILE = iOSWidgets/Bookmarks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.Kiwix.Bookmarks;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -2150,6 +2165,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3577B1822471E1C4D5274B7D /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iOS;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2182,6 +2198,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C93DC28B91BE9E73AFC06E16 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_iOS;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2209,6 +2226,53 @@
 			};
 			name = Release;
 		};
+		97C57600202CB0E900E37502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7HWM3SP3L;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = iOS/BookmarksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.Kiwix.Bookmarks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97C57601202CB0E900E37502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7HWM3SP3L;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = iOS/BookmarksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.Kiwix.Bookmarks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2217,15 +2281,6 @@
 			buildConfigurations = (
 				975FDAE61F6082DA00A10E8C /* Debug */,
 				975FDAE71F6082DA00A10E8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9779C31F1D4575AE0064CC8E /* Build configuration list for PBXNativeTarget "Bookmarks" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9779C3201D4575AE0064CC8E /* Debug */,
-				9779C3211D4575AE0064CC8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2253,6 +2308,15 @@
 			buildConfigurations = (
 				97A36C4C1F8C21210079B452 /* Debug */,
 				97A36C4D1F8C21210079B452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C575FF202CB0E900E37502 /* Build configuration list for PBXNativeTarget "Bookmarks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C57600202CB0E900E37502 /* Debug */,
+				97C57601202CB0E900E37502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
