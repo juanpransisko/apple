@@ -13,8 +13,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UICollectionView
     @IBOutlet weak var collectionView: UICollectionView!
     private var bookmarks = [(title: String, url: String, thumbImageData: Data)]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         bookmarks = getBookmarks()
         collectionView.reloadData()
     }
@@ -82,5 +82,9 @@ class TodayWidgetCollectionCell: UICollectionViewCell {
         label.numberOfLines = 2
         imageView.layer.cornerRadius = 4
         imageView.layer.masksToBounds = true
+        
+        if #available(iOS 10, *) {
+            cell.label.textColor = UIColor.darkGray
+        }
     }
 }

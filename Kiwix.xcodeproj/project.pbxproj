@@ -316,8 +316,6 @@
 		976D2A601F44F451003F5431 /* libxapian.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxapian.a; sourceTree = "<group>"; };
 		976D2A611F44F451003F5431 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libz.a; sourceTree = "<group>"; };
 		976D2A621F44F451003F5431 /* libzim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzim.a; sourceTree = "<group>"; };
-		9779C3161D4575AE0064CC8E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		9779C31B1D4575AE0064CC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977D7BB01F9E6A43009A8703 /* ZimMultiReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZimMultiReader.h; sourceTree = "<group>"; };
 		977D7BB11F9E6A43009A8703 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		977D7BB21F9E6A43009A8703 /* ZimMultiReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZimMultiReader.mm; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 		977D7BD21F9FE359009A8703 /* ZimMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZimMetaData.swift; sourceTree = "<group>"; };
 		977F983D1F9E43EC002ABFCE /* ScanProcedure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProcedure.swift; sourceTree = "<group>"; };
 		9780DE051E43BFF5009B6945 /* NetworkActivityIndicatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorController.swift; sourceTree = "<group>"; };
-		9788419C1DA2FF2A00D22D3C /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		979315811E5127930093D3BA /* Kiwix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiwix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9793158C1E5127930093D3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		979FD158201679C5007B5290 /* SearchResultsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsListController.swift; sourceTree = "<group>"; };
@@ -628,7 +625,6 @@
 		97D9D4FF1F43813D00A8CBEF /* zimcreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zimcreator.h; sourceTree = "<group>"; };
 		97D9D5001F43813D00A8CBEF /* zim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zim.h; sourceTree = "<group>"; };
 		97D9D5011F43813D00A8CBEF /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zlib.h; sourceTree = "<group>"; };
-		97DB65D91D4576B600A2CC42 /* BookmarkWidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkWidgetCell.swift; sourceTree = "<group>"; };
 		97E34E0B20124F33005080B2 /* SearchNoTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNoTextController.swift; sourceTree = "<group>"; };
 		97E4298F1FBDF48800ABE62E /* DirectoryMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryMonitor.swift; sourceTree = "<group>"; };
 		97E9834D1F4CA0A00021E96A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -911,17 +907,6 @@
 			path = Shared/Dependencies/iOS_lib;
 			sourceTree = SOURCE_ROOT;
 		};
-		9779C3151D4575AD0064CC8E /* Bookmarks */ = {
-			isa = PBXGroup;
-			children = (
-				9788419C1DA2FF2A00D22D3C /* MainInterface.storyboard */,
-				9779C3161D4575AE0064CC8E /* TodayViewController.swift */,
-				97DB65D91D4576B600A2CC42 /* BookmarkWidgetCell.swift */,
-				9779C31B1D4575AE0064CC8E /* Info.plist */,
-			);
-			path = Bookmarks;
-			sourceTree = "<group>";
-		};
 		977D7BAF1F9E6A43009A8703 /* ZimMultiReader */ = {
 			isa = PBXGroup;
 			children = (
@@ -965,7 +950,6 @@
 				973BCD1F1CEB412E00F10B44 /* Shared */,
 				975FDAD81F6082DA00A10E8C /* iOS */,
 				979315821E5127930093D3BA /* macOS */,
-				97E609F21D103DED00EBCB9D /* iOSWidgets */,
 				F544A4E4357A6D33CF234C6B /* Pods */,
 				3B93EAF9B5C5AA23046BDEAC /* Frameworks */,
 				97A36C4E1F8C21210079B452 /* Kiwix.app */,
@@ -1387,14 +1371,6 @@
 				9780DE051E43BFF5009B6945 /* NetworkActivityIndicatorController.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		97E609F21D103DED00EBCB9D /* iOSWidgets */ = {
-			isa = PBXGroup;
-			children = (
-				9779C3151D4575AD0064CC8E /* Bookmarks */,
-			);
-			path = iOSWidgets;
 			sourceTree = "<group>";
 		};
 		97E983521F4DDB2C0021E96A /* View */ = {
