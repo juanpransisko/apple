@@ -36,10 +36,16 @@ class SearchResultsListController: UITableViewController {
         
         cell.backgroundColor = .clear
         cell.titleLabel.text = result.title
-        cell.detailLabel.text = result.snippet
-        cell.detailLabel.attributedText = result.attributedSnippet
         cell.thumbImageView.image = UIImage(data: Book.fetch(id: result.zimFileID, context: CoreDataContainer.shared.viewContext)?.favIcon ?? Data())
         cell.thumbImageView.contentMode = .scaleAspectFit
+        
+        if let snippet = result.snippet {
+            cell.detailLabel.text = snippet
+        } else if let attributedSnippet = result.attributedSnippet {
+            cell.detailLabel.attributedText = attributedSnippet
+        } else {
+            cell.detailLabel.text = nil
+        }
         
         return cell
     }
