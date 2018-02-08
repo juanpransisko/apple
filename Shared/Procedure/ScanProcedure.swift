@@ -19,7 +19,7 @@ class ScanProcedure: Procedure {
     }
     
     override func execute() {
-        urls.forEach({ addReader(dir: $0) })
+        urls.forEach({ addReader(directoryURL: $0) })
         ZimMultiReader.shared.removeStaleReaders()
         updateDatabase()
         
@@ -29,10 +29,11 @@ class ScanProcedure: Procedure {
         finish()
     }
     
-    func addReader(dir: URL) {
-        let urls = (try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil,
-                                                                 options: [.skipsHiddenFiles, .skipsPackageDescendants, .skipsSubdirectoryDescendants])) ?? []
-        urls.forEach({ ZimMultiReader.shared.add(url: $0) })
+    func addReader(directoryURL: URL) {
+        (try? FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: [.isExcludedFromBackupKey],
+                                                      options: [.skipsHiddenFiles, .skipsPackageDescendants, .skipsSubdirectoryDescendants]))?
+            .filter({ $0.pathExtension.contains("zim") })
+            .forEach({ ZimMultiReader.shared.add(url: $0) })
     }
     
     func updateDatabase() {
