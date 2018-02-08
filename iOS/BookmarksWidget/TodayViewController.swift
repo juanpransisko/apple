@@ -84,7 +84,7 @@ class TodayWidgetCollectionCell: UICollectionViewCell {
         imageView.layer.masksToBounds = true
         
         if #available(iOS 10, *) {
-            cell.label.textColor = UIColor.darkGray
+            label.textColor = .darkGray
         }
     }
 }
