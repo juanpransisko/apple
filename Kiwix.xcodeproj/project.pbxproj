@@ -177,6 +177,7 @@
 		97C5763A202CB86800E37502 /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C5761E202CB86800E37502 /* CoreDataContainer.swift */; };
 		97C5763B202CB86800E37502 /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C5761E202CB86800E37502 /* CoreDataContainer.swift */; };
 		97C5763C202CB86800E37502 /* CoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C5761E202CB86800E37502 /* CoreDataContainer.swift */; };
+		97C5763D202CD9C000E37502 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C575F3202CB0E800E37502 /* NotificationCenter.framework */; };
 		97D00A791FBB89F000165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7D1FBB89FB00165629 /* Inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 97A9F6F41E2E990500F423AA /* Inject.js */; };
 		97D00A7F1FBB92D400165629 /* TableOfContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */; };
@@ -683,6 +684,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C5763D202CD9C000E37502 /* NotificationCenter.framework in Frameworks */,
 				97A36C351F8C21210079B452 /* WebKit.framework in Frameworks */,
 				97A36C361F8C21210079B452 /* libicuio.a in Frameworks */,
 				97A36C371F8C21210079B452 /* libz.a in Frameworks */,
@@ -1570,8 +1572,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				979315801E5127930093D3BA /* macOS */,
 				97A36C241F8C21210079B452 /* iOS */,
+				979315801E5127930093D3BA /* macOS */,
 				975FDAD61F6082DA00A10E8C /* WikiMed */,
 				97C575F1202CB0E800E37502 /* Bookmarks */,
 			);

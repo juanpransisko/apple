@@ -69,16 +69,26 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "97A36C241F8C21210079B452"
-            BuildableName = "Kiwix.app"
-            BlueprintName = "iOS"
+            BlueprintIdentifier = "97C575F1202CB0E800E37502"
+            BuildableName = "Bookmarks.appex"
+            BlueprintName = "Bookmarks"
             ReferencedContainer = "container:Kiwix.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C575F1202CB0E800E37502"
+            BuildableName = "Bookmarks.appex"
+            BlueprintName = "Bookmarks"
+            ReferencedContainer = "container:Kiwix.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

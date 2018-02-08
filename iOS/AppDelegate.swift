@@ -13,14 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
     var window: UIWindow?
     let monitor = DirectoryMonitor(url: URL.documentDirectory)
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         Network.shared.restorePreviousState()
         URLProtocol.registerClass(KiwixURLProtocol.self)
         monitor.delegate = self
         Queue.shared.add(scanProcedure: ScanProcedure(url: URL.documentDirectory))
         monitor.start()
         Preference.upgrade()
-        return true
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -45,6 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DirectoryMonitorDelegate 
                 print(error)
             }
         }
+    }
+    
+    // MARK: - URL Handling
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        guard url.scheme?.caseInsensitiveCompare("kiwix") == .orderedSame else {return false}
+        guard let rootNavigationController = window?.rootViewController as? UINavigationController,
+            let mainController = rootNavigationController.topViewController as? MainController else {return false}
+        mainController.presentedViewController?.dismiss(animated: false)
+        mainController.load(url: url)
+        return true
     }
     
     // MARK: - State Restoration

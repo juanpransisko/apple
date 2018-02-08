@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import NotificationCenter
 import SwiftyUserDefaults
 
 class MainController: UIViewController {
@@ -115,7 +116,6 @@ class MainController: UIViewController {
     }
     
     func updateBookmarkWidgetData() {
-        //(title: String, url: String, thumbImageData: Data)
         let context = CoreDataContainer.shared.viewContext
         let bookmarks = Article.fetchRecentBookmarks(count: 8, context: context)
             .map({ (article) -> [String: Any]? in
@@ -123,10 +123,11 @@ class MainController: UIViewController {
                 return [
                     "title": title,
                     "url": url.absoluteString,
-                    "thumbnailData": article.thumbnailData ?? article.book?.favIcon ?? Data()
+                    "thumbImageData": article.thumbnailData ?? article.book?.favIcon ?? Data()
                 ]
             }).flatMap({ $0 })
         UserDefaults(suiteName: "group.kiwix")?.set(bookmarks, forKey: "bookmarks")
+        NCWidgetController.widgetController().setHasContent(bookmarks.count > 0, forWidgetWithBundleIdentifier: "self.Kiwix.Bookmarks")
     }
 }
 
