@@ -176,7 +176,7 @@ NSMutableDictionary *fileURLs = [[NSMutableDictionary alloc] init]; // [ID: File
         std::shared_ptr<kiwix::Reader> reader = iter.second;
         if (reader->hasFulltextIndex()) {
             // file have embedded index, we will let searcher handle this situation
-            searcher->add_reader(reader.get(), NULL);
+            searcher->add_reader(reader.get(), iter.first);
             [searcherZimIDs addObject:identifier];
         } else {
             // file does not have embedded index, try find an external index

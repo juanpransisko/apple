@@ -766,11 +766,11 @@
 			isa = PBXGroup;
 			children = (
 				97C5760D202CB86800E37502 /* CoreData */,
+				976771821F437DB9007ED0C2 /* Dependencies */,
 				975FDB0A1F6092DE00A10E8C /* Loading */,
 				97DF259E1D6F9942001648A3 /* Network */,
 				9702BE201F97FA2600E6B4EE /* Procedure */,
 				977D7BAF1F9E6A43009A8703 /* ZimMultiReader */,
-				976771821F437DB9007ED0C2 /* Dependencies */,
 				97A1FD401D6F728200A80EE2 /* Preference.swift */,
 				97D00A7E1FBB92D400165629 /* TableOfContentItem.swift */,
 				97E4298F1FBDF48800ABE62E /* DirectoryMonitor.swift */,
