@@ -104,10 +104,10 @@ class LibraryBookDetailController: UIViewController, UITableViewDelegate, UITabl
         tableView.register(LibraryActionCell.self, forCellReuseIdentifier: "ActionCell")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationItem.largeTitleDisplayMode = .always
         }
     }
     

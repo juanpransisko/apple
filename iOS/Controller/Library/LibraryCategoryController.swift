@@ -32,9 +32,6 @@ class LibraryCategoryController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Globe"), style: .plain, target: self, action: #selector(languageFilterBottonTapped(sender:)))
     }
     
@@ -43,6 +40,10 @@ class LibraryCategoryController: UIViewController, UITableViewDataSource, UITabl
         // if have refreshed library but have not shown language filter alert, show it
         if Defaults[.libraryLastRefreshTime] != nil && !Defaults[.libraryHasShownLanguageFilterAlert] {
             showLanguageFilter()
+        }
+        
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .always
         }
     }
     

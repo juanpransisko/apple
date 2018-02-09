@@ -45,9 +45,6 @@ class LibraryMasterController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
         title = NSLocalizedString("Library", comment: "Library title")
         refreshControl.addTarget(self, action: #selector(refreshControlPulled), for: .valueChanged)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissController))
@@ -56,9 +53,18 @@ class LibraryMasterController: UIViewController, UITableViewDelegate, UITableVie
             let firstIndexPath = IndexPath(row: 0, section: 0)
             tableView.delegate?.tableView?(tableView, didSelectRowAt: firstIndexPath)
         }
+        
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .always
+        }
+    }
     
     @objc func dismissController() {
         dismiss(animated: true, completion: nil)
