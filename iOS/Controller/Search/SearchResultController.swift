@@ -38,8 +38,12 @@ class SearchResultController: UIViewController, UISearchResultsUpdating, Procedu
         super.viewDidLoad()
         queue.delegate = self
         configureConstraints()
-        edgesForExtendedLayout = []
         visualView.contentView.isHidden = true
+        if #available(iOS 11.0, *) {
+            edgesForExtendedLayout = .all
+        } else {
+            edgesForExtendedLayout = []
+        }
         
         addChildViewController(searchNoTextController)
         searchNoTextController.didMove(toParentViewController: self)
@@ -104,7 +108,12 @@ class SearchResultController: UIViewController, UISearchResultsUpdating, Procedu
         visualView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(visualView)
         
-        visualView.contentView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            visualView.contentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            visualView.contentView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        }
+        
         visualView.contentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         proportionalWidthConstraint = visualView.contentView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75)
